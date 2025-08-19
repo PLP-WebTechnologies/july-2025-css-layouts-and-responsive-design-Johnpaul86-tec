@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgba(221, 231, 228, 0.863);
+}
+
+/* Header */
+header {
+  background-color: rgba(122, 97, 97, 0.7);
+  color: white;
+  padding: 1px;
+  text-align: center;
+}
+
+/* Navigation - Flexbox */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: rgba(62, 78, 150, 0.7);
+  padding: 10px;
+}
+
+.nav-button {
+  background-color: rgba(212, 63, 192, 0.7);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(212, 63, 192, 0.9);
+}
+
+/* Sidebar */
+aside {
+  background-color: rgba(150, 78, 62, 0.7);
+  color: white;
+  padding: 10px;
+  width: 200px;
+  float: left;
+  height: 66vh;
+}
+
+/* Main Content */
+main {
+  margin-left: 220px;
+  padding: 20px;
+  background-color: rgba(97, 150, 78, 0.7);
+  color: white;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.grid-container.alt {
+  background-color: rgb(108, 2, 206);
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(97, 122, 150, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  aside {
+    width: 100%;
+    float: none;
+  }
+
+  main {
+    margin-left: 0;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
